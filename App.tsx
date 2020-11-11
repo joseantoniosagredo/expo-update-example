@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import * as Update from 'expo-updates'
 export default function App() {
+  React.useEffect(() => {
+    Update.reloadAsync()
+  }, [])
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
